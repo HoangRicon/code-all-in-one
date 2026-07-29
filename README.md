@@ -38,11 +38,12 @@ IMPLEMENT (subagent-driven + TDD)
     ↓ G4 Gate
 VERIFY (verification-before-completion)
     ↓
-FINISH (finishing-a-development-branch)
-```
 Ở mỗi GATE check Pass?
  ├── Yes → Finish
  └── No  → Back to Plan / Implement
+FINISH (finishing-a-development-branch)
+```
+
 ---
 
 ## Cách sử dụng
