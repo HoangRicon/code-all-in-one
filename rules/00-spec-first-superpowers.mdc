@@ -1,0 +1,26 @@
+---
+description: 
+alwaysApply: true
+---
+
+## Spec-First Gatekeeper Rule
+
+Any feature, bugfix, or refactor task MUST complete the SDD specification process and receive **explicit user confirmation** before any code is written.
+
+**Detection Logic**:
+- Coding task detected → Check if user-confirmed Spec exists
+- No confirmed Spec → Redirect to `/super-spec` to start spec workflow
+- User requests skip → Decline politely: "According to spec-first rules, the specification phase must be completed first. Please enter /super-spec to begin."
+- Spec written but NOT user-confirmed → DO NOT proceed to planning
+- Plan written but NOT user-confirmed → DO NOT proceed to implementation
+- Design created but NOT user-confirmed → DO NOT proceed to coding
+
+**Mode Selection**: Spec-Kit vs OpenSpec (default OpenSpec), determined by project `.spec-mode` file or directory signals.
+
+**Hard Stops (Quality Gates)**:
+- G1 Gate: User must explicitly confirm spec → no implementation
+- G2 Gate: User must explicitly confirm plan → no implementation
+- G3 Gate: User must explicitly confirm design → no implementation
+- G4 Gate: All tests must pass → no archive
+
+**This rule is the always-on gatekeeper. The full workflow is driven by the `spec-first-superpowers` Skill.**
