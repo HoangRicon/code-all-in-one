@@ -8,20 +8,21 @@ Quy trình phát triển chuyên nghiệp: **Spec → Plan → Design → Implem
 ## Cài đặt
 
 Tải folder `skills/` và `rules/`về, copy vào `.cursor` hoặc `.agent` hoặc . gì đó của IDE bạn sử dụng trong thư mục home:
-(Nếu ko biết cài thì bỏ vào cho AI cài hộ)
+
+Nếu AI Agent của IDE hỗ trợ thao tác với file hệ thống, bạn có thể yêu cầu nó tự cài đặt.
 
 
 ---
 
-## 5 Skill chính
+## 5 Module cốt lõi
 
-| Project | GitHub | Version | Role |
+| Project | GitHub | Role |
 |---------|--------|---------|------|
-| Spec-Kit | `github/spec-kit` | v0.7.1 | Spec-driven framework (uv) |
-| OpenSpec | `Fission-AI/OpenSpec` | v1.2.0 | Lightweight workflow (npm) |
-| Superpowers | `obra/superpowers` | v5.0.7 | TDD + review + subagents |
-| planning-with-files | `OthmanAdi/planning-with-files` | v2.30.0 | File-based planning |
-| ui-ux-pro-max | `nextlevelbuilder/ui-ux-pro-max-skill` | v2.5.0 | UI/UX design system |
+| Spec-Kit | `github/spec-kit` | Spec-driven framework (uv) |
+| OpenSpec | `Fission-AI/OpenSpec`  | Lightweight workflow (npm) |
+| Superpowers | `obra/superpowers` | TDD + review + subagents |
+| planning-with-files | `OthmanAdi/planning-with-files` | File-based planning |
+| ui-ux-pro-max | `nextlevelbuilder/ui-ux-pro-max-skill` | UI/UX design system |
 
 ---
 ## Workflow
@@ -39,7 +40,9 @@ VERIFY (verification-before-completion)
     ↓
 FINISH (finishing-a-development-branch)
 ```
-
+Ở mỗi GATE check Pass?
+ ├── Yes → Finish
+ └── No  → Back to Plan / Implement
 ---
 
 ## Cách sử dụng
@@ -49,8 +52,8 @@ FINISH (finishing-a-development-branch)
 | Lệnh | Mô tả |
 |------|--------|
 | `/super-spec` hoặc `/spec-first-superpowers` | Full workflow (auto mode + auto complexity) |
-| `/super-spec force-spec-kit` | Force Spec-Kit mode |
-| `/super-spec force-openspec` | Force OpenSpec mode |
+| `/super-spec force-spec-kit` | Bắt buộc chọn Spec-Kit mode |
+| `/super-spec force-openspec` | Bắt buộc chọn OpenSpec mode |
 | `/super-spec reset` | Reset mode selection |
 | `/super-spec upgrade` | Check & update all integrated projects |
 
@@ -59,15 +62,15 @@ FINISH (finishing-a-development-branch)
 ```
 /super-spec
     ↓
-Mode Selection → Complexity Triage → Session Recovery (auto)
+Chọn Mode → Đánh giá Độ phức tạp → Khôi phục Session (auto)
     ↓
-Specification (G1, inline spec review)
+Viết Spec (G1, inline spec review)
     ↓
-Persistent Planning (G2, inline plan review + file structure mapping)
+Lên kế hoạch (G2, inline plan review + file structure mapping)
     ↓
-UI/UX Design (G3, conditional, v2.5.0 intelligent design system)
+Thiết kế UI/UX (G3, tùy chọn, v2.5.0 intelligent design system)
     ↓
-TDD Implementation (G4, model selection + implementer status)
+Implement theo TDD (G4, model selection + implementer status)
     ↓
 Archive (+ MemPalace persistence)
 ```
