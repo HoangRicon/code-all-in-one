@@ -17,7 +17,7 @@ Nếu AI Agent của IDE hỗ trợ thao tác với file hệ thống, bạn có
 ## 5 Module cốt lõi
 
 | Project | GitHub | Role |
-|---------|--------|---------|------|
+|---------|--------|------|
 | Spec-Kit | `github/spec-kit` | Spec-driven framework (uv) |
 | OpenSpec | `Fission-AI/OpenSpec`  | Lightweight workflow (npm) |
 | Superpowers | `obra/superpowers` | TDD + review + subagents |
