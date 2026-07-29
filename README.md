@@ -1,4 +1,4 @@
-# Superpowers Skills for Cursor AI Agent
+# Quy trình code 1 lệnh cho AI Agent Coding
 
 Quy trình phát triển chuyên nghiệp: **Spec → Plan → Design → Implement → Verify**
 
@@ -11,7 +11,7 @@ Tải folder `skills/` và `rules/`về, copy vào `.cursor` hoặc `.agent` tro
 
 ---
 
-## Integrated Projects
+## 5 Skill chính
 
 | Project | GitHub | Version | Role |
 |---------|--------|---------|------|
@@ -22,50 +22,6 @@ Tải folder `skills/` và `rules/`về, copy vào `.cursor` hoặc `.agent` tro
 | ui-ux-pro-max | `nextlevelbuilder/ui-ux-pro-max-skill` | v2.5.0 | UI/UX design system |
 
 ---
-
-## 5 Skill Chính
-
-### 1. spec-first-superpowers
-**Orchestrator** - Điều khiển toàn bộ workflow
-
-- `/super-spec` - Bắt đầu với auto mode detection
-- Auto-select: Spec-Kit vs OpenSpec
-- Quality Gates (G1-G4) - Không cho phép skip phases
-- Commands: `/super-spec`, `/super-spec force-spec-kit`, `/super-spec force-openspec`, `/super-spec upgrade`
-
-### 2. planning-with-files
-**Planning** - Lưu progress vào file
-
-- Tạo `task_plan.md`, `findings.md`, `progress.md`
-- Hooks tự động cập nhật progress
-- Recovery sau `/clear`
-- Scripts: `init-session`, `check-complete`, `attest-plan`
-
-### 3. subagent-driven-development
-**Implementation** - Execute plan với subagents
-
-- Fresh subagent per task
-- Two-stage review: Spec compliance → Code quality
-- Continuous execution (không pause)
-- Status: DONE / DONE_WITH_CONCERNS / NEEDS_CONTEXT / BLOCKED
-
-### 4. test-driven-development
-**TDD** - Red-Green-Refactor cycle
-
-- RED: Write failing test
-- GREEN: Write minimal code
-- REFACTOR: Clean up
-- Iron Law: Không code không có failing test
-
-### 5. systematic-debugging
-**Debug** - Root cause investigation
-
-- 4 Phases: Root Cause → Pattern → Hypothesis → Implementation
-- Iron Law: Không fix không có root cause
-- 3-Strike protocol
-
----
-
 ## Workflow
 
 ```
@@ -73,7 +29,7 @@ SPEC FIRST (/super-spec)
     ↓ G1 Gate
 PLAN (planning-with-files)
     ↓ G2 Gate
-DESIGN UI (ui-ux-pro-max) [optional]
+DESIGN UI (ui-ux-pro-max) [tùy chọn]
     ↓ G3 Gate
 IMPLEMENT (subagent-driven + TDD)
     ↓ G4 Gate
@@ -84,9 +40,41 @@ FINISH (finishing-a-development-branch)
 
 ---
 
+## Cách sử dụng
+
+### Commands
+
+| Lệnh | Mô tả |
+|------|--------|
+| `/super-spec` | Full workflow (auto mode + auto complexity) |
+| `/super-spec force-spec-kit` | Force Spec-Kit mode |
+| `/super-spec force-openspec` | Force OpenSpec mode |
+| `/super-spec reset` | Reset mode selection |
+| `/super-spec upgrade` | Check & update all integrated projects |
+
+### Luồng hoạt động
+
+```
+/super-spec
+    ↓
+Mode Selection → Complexity Triage → Session Recovery (auto)
+    ↓
+Specification (G1, inline spec review)
+    ↓
+Persistent Planning (G2, inline plan review + file structure mapping)
+    ↓
+UI/UX Design (G3, conditional, v2.5.0 intelligent design system)
+    ↓
+TDD Implementation (G4, model selection + implementer status)
+    ↓
+Archive (+ MemPalace persistence)
+```
+
+---
+
 ## Quick Start
 
-1. Copy `skills/` vào `~/.agents`
+1. Copy `skills/` vào `~/.cursor/` hoặc `~/.agent/`
 2. Gõ `/super-spec` để bắt đầu
 3. Làm theo các Gates (G1→G2→G3→G4)
 
