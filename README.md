@@ -39,9 +39,9 @@ IMPLEMENT (subagent-driven + TDD)
 VERIFY (verification-before-completion)
     ↓
 Ở mỗi GATE check Pass?
- ├── Yes → Finish
+ ├── Yes → Finish (finishing-a-development-branch)
  └── No  → Back to Plan / Implement
-FINISH (finishing-a-development-branch)
+
 ```
 
 ---
