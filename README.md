@@ -1,12 +1,14 @@
-# Quy trình code 1 lệnh cho AI Agent Coding
+# Quy trình code 1 lệnh cho AI Agent Coding (Dịch thuật đơn giản từ src Trung Quốc)
 
 Quy trình phát triển chuyên nghiệp: **Spec → Plan → Design → Implement → Verify**
 
+1 LỆNH DÙNG CHO MỌI TÌNH HUỐNG TRONG LẬP TRÌNH
 ---
 
 ## Cài đặt
 
-Tải folder `skills/` và `rules/`về, copy vào `.cursor` hoặc `.agent` trong thư mục home:
+Tải folder `skills/` và `rules/`về, copy vào `.cursor` hoặc `.agent` hoặc . gì đó của IDE bạn sử dụng trong thư mục home:
+(Nếu ko biết cài thì bỏ vào cho AI cài hộ)
 
 
 ---
@@ -46,7 +48,7 @@ FINISH (finishing-a-development-branch)
 
 | Lệnh | Mô tả |
 |------|--------|
-| `/super-spec` | Full workflow (auto mode + auto complexity) |
+| `/super-spec` hoặc `/spec-first-superpowers` | Full workflow (auto mode + auto complexity) |
 | `/super-spec force-spec-kit` | Force Spec-Kit mode |
 | `/super-spec force-openspec` | Force OpenSpec mode |
 | `/super-spec reset` | Reset mode selection |
@@ -75,7 +77,7 @@ Archive (+ MemPalace persistence)
 ## Quick Start
 
 1. Copy `skills/` vào `~/.cursor/` hoặc `~/.agent/`
-2. Gõ `/super-spec` để bắt đầu
+2. Gõ `/super-spec` hoặc `/spec-first-superpowers`  để bắt đầu
 3. Làm theo các Gates (G1→G2→G3→G4)
 
 ---
